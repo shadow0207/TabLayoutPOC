@@ -1,0 +1,48 @@
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/header"
+        android:layout_width="200dp"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start"
+        android:id="@+id/navigationView"></android.support.design.widget.NavigationView>
+
+   
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tabLayout" />
+
+</RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
